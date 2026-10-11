@@ -14,5 +14,10 @@ public class ServicioEpidemiologico {
                 .collect(Collectors.toList());
     }
 
-
+    public double calcularPromedioEdad(List<Paciente> pacientes) {
+        return pacientes.stream()
+                .mapToInt(Paciente::getEdad)
+                .average()
+                .orElse(0.0);
+    }
 }
