@@ -15,6 +15,13 @@ public class Medico extends Usuario {
         this.colegiaturaCMP = colegiaturaCMP;
     }
 
+    @Override
+    public String getRol() {
+        return "MEDICO_TITULAR";
+    }
 
+    public String getColegiaturaCMP() { 
+        return colegiaturaCMP; 
+    }
 }
 
